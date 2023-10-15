@@ -66,7 +66,7 @@ closebutton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 closebutton.Text = "X"
 closebutton.TextSize = 30
 closebutton.TextColor3 = Color3.fromRGB(0, 0, 0)
-closebutton.Position = UDim2.new(0, 0, 0, 0)
+closebutton.Position = UDim2.new(0, 0, 0, 4)
 
 -- Yan Yana
 AutoParry.Position = UDim2.new(0, 0, 0, 0)
