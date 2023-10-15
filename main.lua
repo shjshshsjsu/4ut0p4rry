@@ -14,7 +14,7 @@ local StatusClickLabel = Instance.new("TextLabel")
 local closebutton = Instance.new("TextButton")
 
 main.Name = "main"
-main.Parent = game
+main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 main.ResetOnSpawn = false
 main.IgnoreGuiInset = true -- Ekran kenarlarını dikkate alma
@@ -25,7 +25,8 @@ Frame.Parent = main
 Frame.BackgroundColor3 = Color3.fromRGB(54, 54, 54)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.Position = UDim2.new(0.100320168, 0, 0.379746825, 0)
-Frame.Size = UDim2.new(0, 270, 0, 80)
+Frame.Size = UDim2.new(0, 250, 0, 57)
+
 
 AutoParry.Name = "AutoParry"
 AutoParry.Parent = Frame
