@@ -34,22 +34,18 @@ Duration = 5;
 -- Auto Parry
 
 Auto.MouseButton1Click:connect(function()
-    getgenv().god = true
-    while getgenv().god do
-        task.wait(1)  -- Belirli bir süre bekleyin, süreyi ihtiyacınıza göre ayarlayın
-        local localPlayer = game:GetService("Players").LocalPlayer
-        local character = localPlayer.Character
-        local humanoidRootPart = character and character:FindFirstChild("HumanoidRootPart")
-        
-        if humanoidRootPart then
-            for _, ball in ipairs(workspace.Balls:GetChildren()) do
-                if ball then
-                    humanoidRootPart.CFrame = CFrame.new(humanoidRootPart.Position, ball.Position)
-                    if character:FindFirstChild("Highlight") then
-                        game:GetService("ReplicatedStorage").Remotes.ParryButtonPress:Fire()
-                    end
+    getgenv().god = true  
+while getgenv().god do
+    for _,ball in next, workspace.Balls:GetChildren() do
+        if ball then
+            if game:GetService("Players").LocalPlayer.Character and game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+                game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position, ball.Position)
+                if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Highlight") then
+                    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = ball.CFrame * CFrame.new(0, 0, (ball.Velocity).Magnitude * -0.5)
+                    game:GetService("ReplicatedStorage").Remotes.ParryButtonPress:Fire()
                 end
             end
         end
     end
+            end
 end)
