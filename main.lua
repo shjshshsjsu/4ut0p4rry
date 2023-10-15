@@ -19,6 +19,7 @@ main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 main.ResetOnSpawn = false
 main.IgnoreGuiInset = true -- Ekran kenarlarını dikkate alma
 main.DisplayOrder = 999 -- Ekran düzenleme sırası
+main.Size = UDim2.new(0, 500, 0, 200)
 
 
 Frame.Parent = main
