@@ -13,10 +13,10 @@ Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.Position = UDim2.new(0.100320168, 0, 0.379746825, 0)
 Frame.Size = UDim2.new(0, 190, 0, 57) 
 
-Auto.Name = "up"
+Auto.Name = "Auto"
 Auto.Parent = Frame
 Auto.BackgroundColor3 = Color3.fromRGB(51, 51, 51)
-Auto.Size = UDim2.new(0, 44, 0, 44)
+Auto.Size = UDim2.new(0, 50, 0, 44)
 Auto.Font = Enum.Font.SourceSans
 Auto.Text = "Auto Parry"
 Auto.BorderColor3 = Color3.fromRGB(0, 0, 0)
