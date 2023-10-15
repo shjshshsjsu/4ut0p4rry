@@ -36,26 +36,23 @@ Duration = 5;
 Auto.MouseButton1Click:connect(function()
     getgenv().god = true
 
-    while getgenv().god do
-        task.wait(1)
+while getgenv().god and task.wait() do
+    local localPlayer = game:GetService("Players").LocalPlayer
+    local character = localPlayer.Character
 
-        local localPlayer = game:GetService("Players").LocalPlayer
-        local character = localPlayer.Character
-        local humanoidRootPart = character and character:FindFirstChild("HumanoidRootPart")
+    if character and character:FindFirstChild("HumanoidRootPart") then
+        local humanoidRootPart = character.HumanoidRootPart
 
-        if humanoidRootPart then
-            local balls = workspace.Balls:GetChildren()
+        for _, ball in ipairs(workspace.Balls:GetChildren()) do
+            if ball and humanoidRootPart then
+                humanoidRootPart.CFrame = CFrame.new(humanoidRootPart.Position, ball.Position)
 
-            for _, ball in ipairs(balls) do
-                if ball then
-                    humanoidRootPart.CFrame = CFrame.new(humanoidRootPart.Position, ball.Position)
-
-                    local highlight = character:FindFirstChild("Highlight")
-                    if highlight then
-                        game:GetService("ReplicatedStorage").Remotes.ParryButtonPress:Fire()
-                    end
+                if character:FindFirstChild("Highlight") then
+                    humanoidRootPart.CFrame = ball.CFrame * CFrame.new(0, 0, (ball.Velocity).Magnitude * -0.5)
+                    game:GetService("ReplicatedStorage").Remotes.ParryButtonPress:Fire()
                 end
             end
         end
     end
-end)
+end
+    end)
