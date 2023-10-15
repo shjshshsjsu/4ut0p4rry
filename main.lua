@@ -1,6 +1,7 @@
 local main = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local Auto = Instance.new("TextButton")
+local Click = Instance.new("TextButton")
 
 main.Name = "main"
 main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -22,6 +23,16 @@ Auto.Text = "Auto Parry"
 Auto.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Auto.TextColor3 = Color3.fromRGB(0, 0, 0)
 Auto.TextSize = 14.000 
+
+Click.Name = "Click"
+Click.Parent = Frame
+Click.BackgroundColor3 = Color3.fromRGB(51, 51, 51)
+Click.Size = UDim2.new(0, 50, 0, 44)
+Click.Font = Enum.Font.SourceSans
+Click = "Auto Click"
+Click.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Click.TextColor3 = Color3.fromRGB(0, 0, 0)
+Click.TextSize = 14.000 
 
 -- Bildirim 
 
@@ -55,4 +66,17 @@ while getgenv().god and task.wait() do
         end
     end
 end
+    end)
+
+-- Auto Click
+
+Click.MouseButton1Click:connect(function()
+    local function repeatFunction()
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("ParryAttempt"):FireServer(unpack(args))
+end
+
+while true do
+    repeatFunction()
+    task.wait(1)
+        end
     end)
