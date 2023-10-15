@@ -53,10 +53,6 @@ closebutton.Position = UDim2.new(0, 0, -1, 27)
 --Yan Yana
 Click.Position = UDim2.new(0, 0, 0, 0)
 Auto.Position = UDim2.new(0, 110, 0, 0)
--- Açık-Kapali
-
-local isAutoEnabled = false
-
 -- Bildirim 
 
 game:GetService("StarterGui"):SetCore("SendNotification", { 
@@ -97,33 +93,10 @@ closebutton.MouseButton1Click:Connect(function()
 main:Destroy()
 end) 
 
-
--- AutoButton'a tıklandığında çalışacak fonksiyon
-Auto.MouseButton1Click:Connect(function()
-    isAutoEnabled = not isAutoEnabled  -- Toggle (Açıksa kapat, kapalıysa aç)
-    
-    if isAutoEnabled then
-        print("AutoButton clicked! Auto mode is now enabled.")
-        -- Buraya Auto modun başladığında yapılması istenen işlemleri ekleyebilirsiniz
-            while true do
-    if isAutoEnabled then
-        print("Auto mode is active. Running auto code...")
-        -- Buraya Auto modu çalıştırmak istediğiniz kodu ekleyebilirsiniz
-
+Click.MouseButton1Click:Connect(function()
         
-    else
-        print("AutoButton clicked! Auto mode is now disabled.")
-        -- Buraya Auto modun durduğunda yapılması istenen işlemleri ekleyebilirsiniz
-    end
-end)
-
--- Sonsuz bir döngü içinde Auto modu çalıştır
-while true do
-    if isAutoEnabled then
-        print("Auto mode is active. Running auto code...")
-        -- Buraya Auto modu çalıştırmak istediğiniz kodu ekleyebilirsiniz
-
-        local args = {
+local function repeatFunction()
+local args = {
     [1] = 1.5,
     [2] = CFrame.new(-183.08358764648438, 125.93684387207031, 29.001541137695312, 0.9923487305641174, -0.07399874925613403, 0.09883421659469604, -3.500516765342354e-09, 0.8004931211471558, 0.5993419885635376, -0.12346666306257248, -0.5947562456130981, 0.794368326663971),
     [3] = {
@@ -151,7 +124,9 @@ while true do
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("ParryAttempt"):FireServer(unpack(args))
-    end
-    end
+        end
+while true do
+    repeatFunction()
     wait(1)
-end
+        end
+end) 
