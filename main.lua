@@ -26,7 +26,7 @@ Auto.TextSize = 14.000
 
 closebutton.Name = "Close"
 closebutton.Parent = main.Frame
-closebutton.BackgroundColor3 = Color3.fromRGB(51, 51, 51)
+closebutton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 closebutton.Font = "SourceSans"
 closebutton.Size = UDim2.new(0, 45, 0, 28)
 closebutton.BorderColor3 = Color3.fromRGB(0, 0, 0)
