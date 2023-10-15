@@ -45,7 +45,7 @@ StatusParryLabel.Position = UDim2.new(0, 110, 0, -80)
 StatusParryLabel.Size = UDim2.new(0, 85, 0, 55)
 StatusParryLabel.Font = Enum.Font.SourceSans
 StatusParryLabel.Text = "Status Parry: Off"
-StatusParryLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+StatusParryLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
 StatusParryLabel.TextSize = 14.000
 
 AutoClick.Name = "AutoClick"
@@ -65,7 +65,7 @@ StatusClickLabel.Position = UDim2.new(0, 110, 0, 2)
 StatusClickLabel.Size = UDim2.new(0, 85, 0, -60)
 StatusClickLabel.Font = Enum.Font.SourceSans
 StatusClickLabel.Text = "Status Click: Off"
-StatusClickLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+StatusClickLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
 StatusClickLabel.TextSize = 14.000
 
 closebutton.Name = "Close"
@@ -98,6 +98,7 @@ local autoClickEnabled = false
 AutoParry.MouseButton1Click:Connect(function()
     autoParryEnabled = not autoParryEnabled
     StatusParryLabel.Text = "Status Parry: " .. (autoParryEnabled and "On" or "Off")
+        StatusParryLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
     if autoParryEnabled then
         print("Auto Parry is enabled.")
             getgenv().god = true
