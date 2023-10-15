@@ -1,49 +1,61 @@
 local main = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
-local Auto = Instance.new("TextButton")
-local StatusLabel = Instance.new("TextLabel")
+local AutoParry = Instance.new("TextButton")
+local StatusParryLabel = Instance.new("TextLabel")
+local AutoClick = Instance.new("TextButton")
+local StatusClickLabel = Instance.new("TextLabel")
 local closebutton = Instance.new("TextButton")
-local Click = Instance.new("TextButton")
 
 main.Name = "main"
 main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-main.ResetOnSpawn = false 
+main.ResetOnSpawn = false
 
 Frame.Parent = main
 Frame.BackgroundColor3 = Color3.fromRGB(54, 54, 54)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.Position = UDim2.new(0.100320168, 0, 0.379746825, 0)
-Frame.Size = UDim2.new(0, 250, 0, 57) 
+Frame.Size = UDim2.new(0, 250, 0, 57)
 
-Auto.Name = "Auto"
-Auto.Parent = Frame
-Auto.BackgroundColor3 = Color3.fromRGB(51, 51, 51)
-Auto.Size = UDim2.new(0, 55, 0, 55)
-Auto.Font = Enum.Font.SourceSans
-Auto.Text = "Auto Parry"
-Auto.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Auto.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoParry.Name = "AutoParry"
+AutoParry.Parent = Frame
+AutoParry.BackgroundColor3 = Color3.fromRGB(51, 51, 51)
+AutoParry.Size = UDim2.new(0, 55, 0, 55)
+AutoParry.Font = Enum.Font.SourceSans
+AutoParry.Text = "Auto Parry"
+AutoParry.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AutoParry.TextColor3 = Color3.fromRGB(0, 0, 0)
 
-StatusLabel.Name = "StatusLabel"
-StatusLabel.Parent = Frame
-StatusLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-StatusLabel.BackgroundTransparency = 1.000
-StatusLabel.Position = UDim2.new(0, 165, 0, 0)
-StatusLabel.Size = UDim2.new(0, 85, 0, 55)
-StatusLabel.Font = Enum.Font.SourceSans
-StatusLabel.Text = "Status: Off"
-StatusLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-StatusLabel.TextSize = 14.000
+StatusParryLabel.Name = "StatusParryLabel"
+StatusParryLabel.Parent = Frame
+StatusParryLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+StatusParryLabel.BackgroundTransparency = 1.000
+StatusParryLabel.Position = UDim2.new(0, 165, 0, 0)
+StatusParryLabel.Size = UDim2.new(0, 85, 0, 55)
+StatusParryLabel.Font = Enum.Font.SourceSans
+StatusParryLabel.Text = "Status Parry: Off"
+StatusParryLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+StatusParryLabel.TextSize = 14.000
 
-Click.Name = "Click"
-Click.Parent = Frame
-Click.BackgroundColor3 = Color3.fromRGB(51, 51, 51)
-Click.Size = UDim2.new(0, 55, 0, 55)
-Click.Font = Enum.Font.SourceSans
-Click.Text = "Auto Click"
-Click.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Click.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoClick.Name = "AutoClick"
+AutoClick.Parent = Frame
+AutoClick.BackgroundColor3 = Color3.fromRGB(51, 51, 51)
+AutoClick.Size = UDim2.new(0, 55, 0, 55)
+AutoClick.Font = Enum.Font.SourceSans
+AutoClick.Text = "Auto Click"
+AutoClick.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AutoClick.TextColor3 = Color3.fromRGB(0, 0, 0)
+
+StatusClickLabel.Name = "StatusClickLabel"
+StatusClickLabel.Parent = Frame
+StatusClickLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+StatusClickLabel.BackgroundTransparency = 1.000
+StatusClickLabel.Position = UDim2.new(0, 70, 0, 0)
+StatusClickLabel.Size = UDim2.new(0, 85, 0, 55)
+StatusClickLabel.Font = Enum.Font.SourceSans
+StatusClickLabel.Text = "Status Click: Off"
+StatusClickLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+StatusClickLabel.TextSize = 14.000
 
 closebutton.Name = "Close"
 closebutton.Parent = Frame
@@ -57,33 +69,53 @@ closebutton.TextColor3 = Color3.fromRGB(0, 0, 0)
 closebutton.Position = UDim2.new(0, 0, 0, 0)
 
 -- Yan Yana
-Click.Position = UDim2.new(0, 0, 0, 0)
-Auto.Position = UDim2.new(0, 110, 0, 0)
+AutoParry.Position = UDim2.new(0, 0, 0, 0)
+AutoClick.Position = UDim2.new(0, 110, 0, 0)
 
--- Bildirim 
-game:GetService("StarterGui"):SetCore("SendNotification", { 
-    Title = "Blade Ball V1";
-    Text = "By Wreston";
+-- Bildirim
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Blade Ball V1",
+    Text = "By Wreston",
     Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"
 })
-Duration = 5; 
+Duration = 5;
 
 local autoParryEnabled = false
 local autoClickEnabled = false
 
 -- Auto Parry
-Auto.MouseButton1Click:Connect(function()
+AutoParry.MouseButton1Click:Connect(function()
     autoParryEnabled = not autoParryEnabled
+    StatusParryLabel.Text = "Status Parry: " .. (autoParryEnabled and "On" or "Off")
     if autoParryEnabled then
         print("Auto Parry is enabled.")
-        StatusLabel.Text = "Status: On"
+            getgenv().god = true
+
+while getgenv().god and task.wait() do
+    local localPlayer = game:GetService("Players").LocalPlayer
+    local character = localPlayer.Character
+
+    if character and character:FindFirstChild("HumanoidRootPart") then
+        local humanoidRootPart = character.HumanoidRootPart
+
+        for _, ball in ipairs(workspace.Balls:GetChildren()) do
+            if ball and humanoidRootPart then
+                humanoidRootPart.CFrame = CFrame.new(humanoidRootPart.Position, ball.Position)
+
+                if character:FindFirstChild("Highlight") then
+                    humanoidRootPart.CFrame = ball.CFrame * CFrame.new(0, 0, (ball.Velocity).Magnitude * -0.5)
+                    game:GetService("ReplicatedStorage").Remotes.ParryButtonPress:Fire()
+                end
+            end
+        end
+    end
+            end
         while autoParryEnabled do
             -- Auto Parry işlemleri buraya gelecek
             wait(1)
         end
     else
         print("Auto Parry is disabled.")
-        StatusLabel.Text = "Status: Off"
     end
 end)
 
@@ -105,18 +137,17 @@ local function repeatFunction()
     game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("ParryAttempt"):FireServer(unpack(args))
 end
 
-Click.MouseButton1Click:Connect(function()
+AutoClick.MouseButton1Click:Connect(function()
     autoClickEnabled = not autoClickEnabled
+    StatusClickLabel.Text = "Status Click: " .. (autoClickEnabled and "On" or "Off")
     if autoClickEnabled then
         print("Auto Click is enabled.")
-        StatusLabel.Text = "Status: On"
         while autoClickEnabled do
             repeatFunction()
             wait(1)
         end
     else
         print("Auto Click is disabled.")
-        StatusLabel.Text = "Status: Off"
     end
 end)
 
