@@ -70,13 +70,3 @@ end
 
 -- Auto Click
 
-Click.MouseButton1Click:connect(function()
-    local function repeatFunction()
-    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("ParryAttempt"):FireServer(unpack(args))
-end
-
-while true do
-    repeatFunction()
-    task.wait(1)
-        end
-    end)
