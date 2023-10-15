@@ -17,10 +17,6 @@ Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.Position = UDim2.new(0.100320168, 0, 0.379746825, 0)
 Frame.Size = UDim2.new(0, 250, 0, 57)
 
--- Yan Yana
-AutoParry.Position = UDim2.new(0, 0, 0, 0)
-AutoClick.Position = UDim2.new(0, 110, 0, 0)
-
 AutoParry.Name = "AutoParry"
 AutoParry.Parent = Frame
 AutoParry.BackgroundColor3 = Color3.fromRGB(51, 51, 51)
@@ -31,10 +27,10 @@ AutoParry.BorderColor3 = Color3.fromRGB(0, 0, 0)
 AutoParry.TextColor3 = Color3.fromRGB(0, 0, 0)
 
 StatusParryLabel.Name = "StatusParryLabel"
-StatusParryLabel.Parent = main
+StatusParryLabel.Parent = Frame
 StatusParryLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 StatusParryLabel.BackgroundTransparency = 1.000
-StatusParryLabel.Position = UDim2.new(0.231578946, 0, -1, 0)
+StatusParryLabel.Position = UDim2.new(0, 165, 0, 0)
 StatusParryLabel.Size = UDim2.new(0, 85, 0, 55)
 StatusParryLabel.Font = Enum.Font.SourceSans
 StatusParryLabel.Text = "Status Parry: Off"
@@ -51,10 +47,10 @@ AutoClick.BorderColor3 = Color3.fromRGB(0, 0, 0)
 AutoClick.TextColor3 = Color3.fromRGB(0, 0, 0)
 
 StatusClickLabel.Name = "StatusClickLabel"
-StatusClickLabel.Parent = main
+StatusClickLabel.Parent = Frame
 StatusClickLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 StatusClickLabel.BackgroundTransparency = 1.000
-StatusClickLabel.Position = UDim2.new(0.231578946, 0, -2, 0)
+StatusClickLabel.Position = UDim2.new(0, 70, 0, 0)
 StatusClickLabel.Size = UDim2.new(0, 85, 0, 55)
 StatusClickLabel.Font = Enum.Font.SourceSans
 StatusClickLabel.Text = "Status Click: Off"
@@ -62,7 +58,7 @@ StatusClickLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 StatusClickLabel.TextSize = 14.000
 
 closebutton.Name = "Close"
-closebutton.Parent = main
+closebutton.Parent = Frame
 closebutton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 closebutton.Font = "SourceSans"
 closebutton.Size = UDim2.new(0, 45, 0, 28)
@@ -70,7 +66,11 @@ closebutton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 closebutton.Text = "X"
 closebutton.TextSize = 30
 closebutton.TextColor3 = Color3.fromRGB(0, 0, 0)
-closebutton.Position = UDim2.new(0, 0, -1, 27)
+closebutton.Position = UDim2.new(0, 0, 0, 0)
+
+-- Yan Yana
+AutoParry.Position = UDim2.new(0, 0, 0, 0)
+AutoClick.Position = UDim2.new(0, 110, 0, 0)
 
 -- Bildirim
 game:GetService("StarterGui"):SetCore("SendNotification", {
@@ -89,27 +89,6 @@ AutoParry.MouseButton1Click:Connect(function()
     StatusParryLabel.Text = "Status Parry: " .. (autoParryEnabled and "On" or "Off")
     if autoParryEnabled then
         print("Auto Parry is enabled.")
-            getgenv().god = true
-
-while getgenv().god and task.wait() do
-    local localPlayer = game:GetService("Players").LocalPlayer
-    local character = localPlayer.Character
-
-    if character and character:FindFirstChild("HumanoidRootPart") then
-        local humanoidRootPart = character.HumanoidRootPart
-
-        for _, ball in ipairs(workspace.Balls:GetChildren()) do
-            if ball and humanoidRootPart then
-                humanoidRootPart.CFrame = CFrame.new(humanoidRootPart.Position, ball.Position)
-
-                if character:FindFirstChild("Highlight") then
-                    humanoidRootPart.CFrame = ball.CFrame * CFrame.new(0, 0, (ball.Velocity).Magnitude * -0.5)
-                    game:GetService("ReplicatedStorage").Remotes.ParryButtonPress:Fire()
-                end
-            end
-        end
-    end
-            end
         while autoParryEnabled do
             -- Auto Parry işlemleri buraya gelecek
             wait(1)
