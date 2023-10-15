@@ -28,7 +28,6 @@ Auto.TextSize = 14.000
 Click.Name = "Click"
 Click.Parent = Frame
 Click.BackgroundColor3 = Color3.fromRGB(51, 51, 51)
-Click.Position = UDim2.new(0, 28, 0, 28)
 Click.Size = UDim2.new(0, 55, 0, 55)
 Click.Font = Enum.Font.SourceSans
 Click.Text = "Auto Click"
@@ -47,8 +46,11 @@ closebutton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 closebutton.Text = "X"
 closebutton.TextSize = 30
 closebutton.TextColor3 = Color3.fromRGB(0, 0, 0)
-closebutton.Position = UDim2.new(0, 0, -1, 27) 
+closebutton.Position = UDim2.new(0, 0, -1, 27)
 
+--Yan Yana
+Click.Position = UDim2.new(0, 0, 0, 0)
+Auto.Position = UDim2.new(0, 110, 0, 0)
 -- Bildirim 
 
 game:GetService("StarterGui"):SetCore("SendNotification", { 
