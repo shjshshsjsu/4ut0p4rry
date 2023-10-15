@@ -69,5 +69,9 @@ while getgenv().god and task.wait() do
 end
     end)
 
--- Auto Click
+-- Close Button
+
+closebutton.MouseButton1Click:Connect(function()
+main:Destroy()
+end) 
 
