@@ -25,7 +25,7 @@ Frame.Parent = main
 Frame.BackgroundColor3 = Color3.fromRGB(54, 54, 54)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.Position = UDim2.new(0.100320168, 0, 0.379746825, 0)
-Frame.Size = UDim2.new(0, 250, 0, 57)
+Frame.Size = UDim2.new(0, 280, 0, 80)
 
 
 AutoParry.Name = "AutoParry"
@@ -36,6 +36,8 @@ AutoParry.Font = Enum.Font.SourceSans
 AutoParry.Text = "Auto Parry"
 AutoParry.BorderColor3 = Color3.fromRGB(0, 0, 0)
 AutoParry.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoParry.TextScaled = true
+AutoParry.TextWrapped = true
 
 StatusParryLabel.Name = "StatusParryLabel"
 StatusParryLabel.Parent = Frame
@@ -56,6 +58,8 @@ AutoClick.Font = Enum.Font.SourceSans
 AutoClick.Text = "Auto Click"
 AutoClick.BorderColor3 = Color3.fromRGB(0, 0, 0)
 AutoClick.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoClick.TextScaled = true
+AutoClick.TextWrapped = true 
 
 StatusClickLabel.Name = "StatusClickLabel"
 StatusClickLabel.Parent = Frame
