@@ -14,7 +14,7 @@ local StatusClickLabel = Instance.new("TextLabel")
 local closebutton = Instance.new("TextButton")
 
 main.Name = "main"
-main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+main.Parent = game.Players.LocalPlayer:WaitForChild("ScreenGui")
 main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 main.ResetOnSpawn = false
 main.IgnoreGuiInset = true -- Ekran kenarlarını dikkate alma
