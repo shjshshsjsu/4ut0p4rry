@@ -24,16 +24,6 @@ Auto.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Auto.TextColor3 = Color3.fromRGB(0, 0, 0)
 Auto.TextSize = 14.000 
 
-Click.Name = "Click"
-Click.Parent = Frame
-Click.BackgroundColor3 = Color3.fromRGB(51, 51, 51)
-Click.Size = UDim2.new(0, 50, 0, 44)
-Click.Font = Enum.Font.SourceSans
-Click = "Auto Click"
-Click.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Click.TextColor3 = Color3.fromRGB(0, 0, 0)
-Click.TextSize = 14.000 
-
 -- Bildirim 
 
 game:GetService("StarterGui"):SetCore("SendNotification", { 
