@@ -32,6 +32,7 @@ Click.Position = UDim2.new(0.468421042, 0, 0.491228074, 0)
 Click.Size = UDim2.new(0, 44, 0, 28)
 Click.Font = Enum.Font.SourceSans
 Click.Text = "Auto Click"
+Click.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Click.TextColor3 = Color3.fromRGB(0, 0, 0)
 Click.TextScaled = true
 Click.TextSize = 14.000
