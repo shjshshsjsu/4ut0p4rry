@@ -48,4 +48,4 @@ while getgenv().god and task.wait() do
         end
     end
     end
-  end
+  end)
