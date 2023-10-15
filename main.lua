@@ -90,5 +90,14 @@ main:Destroy()
 end) 
 
 Click.MouseButton1Click:Connect(function()
-main:Destroy()
+        
+local function repeatFunction()
+    -- Kodunuzu buraya ekleyin
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("ParryAttempt"):FireServer(unpack(args))
+end
+
+while true do
+    repeatFunction()
+    wait(1)
+        end
 end) 
