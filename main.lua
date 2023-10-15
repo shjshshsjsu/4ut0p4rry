@@ -22,3 +22,11 @@ Auto.Text = "Auto Parry"
 Auto.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Auto.TextColor3 = Color3.fromRGB(0, 0, 0)
 Auto.TextSize = 14.000 
+
+-- Bildirim 
+
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+Title = "Blade Ball V1";
+Text = "By Wreston";
+Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+Duration = 5; 
