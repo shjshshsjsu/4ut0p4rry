@@ -30,7 +30,7 @@ StatusParryLabel.Name = "StatusParryLabel"
 StatusParryLabel.Parent = Frame
 StatusParryLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 StatusParryLabel.BackgroundTransparency = 1.000
-StatusParryLabel.Position = UDim2.new(0, 110, 0, 4)
+StatusParryLabel.Position = UDim2.new(0, 110, 0, 10)
 StatusParryLabel.Size = UDim2.new(0, 85, 0, 55)
 StatusParryLabel.Font = Enum.Font.SourceSans
 StatusParryLabel.Text = "Status Parry: Off"
@@ -51,7 +51,7 @@ StatusClickLabel.Parent = Frame
 StatusClickLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 StatusClickLabel.BackgroundTransparency = 1.000
 StatusClickLabel.Position = UDim2.new(0, 110, 0, 2)
-StatusClickLabel.Size = UDim2.new(0, 85, 0, 5)
+StatusClickLabel.Size = UDim2.new(0, 85, 0, 8)
 StatusClickLabel.Font = Enum.Font.SourceSans
 StatusClickLabel.Text = "Status Click: Off"
 StatusClickLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -66,7 +66,7 @@ closebutton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 closebutton.Text = "X"
 closebutton.TextSize = 30
 closebutton.TextColor3 = Color3.fromRGB(0, 0, 0)
-closebutton.Position = UDim2.new(0, 0, 0, 4)
+closebutton.Position = UDim2.new(0, 0, 0, 10)
 
 -- Yan Yana
 AutoParry.Position = UDim2.new(0, 0, 0, 0)
