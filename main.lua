@@ -23,7 +23,9 @@ Auto.Font = Enum.Font.SourceSans
 Auto.Text = "Auto Parry"
 Auto.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Auto.TextColor3 = Color3.fromRGB(0, 0, 0)
-Auto.TextSize = 14.000 
+Click.TextScaled = true
+Click.TextSize = 14.000
+Click.TextWrapped = true 
 
 Click.Name = "Click"
 Click.Parent = Frame
