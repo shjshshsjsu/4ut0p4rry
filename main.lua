@@ -1,8 +1,10 @@
+-- Değişkenler
 local dragging
 local dragInput
 local dragStart
 local startPos
 
+-- UI Elemanları
 local main = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local AutoParry = Instance.new("TextButton")
@@ -11,15 +13,12 @@ local AutoClick = Instance.new("TextButton")
 local StatusClickLabel = Instance.new("TextLabel")
 local closebutton = Instance.new("TextButton")
 
-
-
 main.Name = "main"
 main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 main.ResetOnSpawn = false
 main.IgnoreGuiInset = true -- Ekran kenarlarını dikkate alma
 
--- Ekranın sağ ve alt kenarına yapışık olarak genişletilecek şekilde ayarla
 main.Position = UDim2.new(0, 0, 0, 0)
 main.Size = UDim2.new(1, 0, 1, 0)
 
@@ -29,7 +28,6 @@ Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.Position = UDim2.new(0.100320168, 0, 0.379746825, 0)
 Frame.Size = UDim2.new(0, 250, 0, 57)
 
--- Geri kalan kodlar aynı kaldı...
 
 AutoParry.Name = "AutoParry"
 AutoParry.Parent = Frame
