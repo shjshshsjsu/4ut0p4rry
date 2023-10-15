@@ -19,15 +19,14 @@ main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 main.ResetOnSpawn = false
 main.IgnoreGuiInset = true -- Ekran kenarlarını dikkate alma
 main.DisplayOrder = 999 -- Ekran düzenleme sırası
-main.Size = UDim2.new(0, 500, 0, 200)
 
 
 Frame.Parent = main
 Frame.BackgroundColor3 = Color3.fromRGB(54, 54, 54)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.Position = UDim2.new(0.100320168, 0, 0.379746825, 0)
-Frame.Size = UDim2.new(0, 250, 0, 57)
-
+Frame.Size = UDim2.new(0, 270, 0, 80)
+Frame.ClipsDescendants = false -- Bu özellik, çocuk öğelerin Frame dışına çıkmasını engeller.
 
 AutoParry.Name = "AutoParry"
 AutoParry.Parent = Frame
