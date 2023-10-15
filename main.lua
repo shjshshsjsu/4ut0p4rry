@@ -1,6 +1,7 @@
 local main = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local Auto = Instance.new("TextButton")
+local closebutton = Instance.new("TextButton")
 
 main.Name = "main"
 main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -22,6 +23,17 @@ Auto.Text = "Auto Parry"
 Auto.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Auto.TextColor3 = Color3.fromRGB(0, 0, 0)
 Auto.TextSize = 14.000 
+
+closebutton.Name = "Close"
+closebutton.Parent = main.Frame
+closebutton.BackgroundColor3 = Color3.fromRGB(51, 51, 51)
+closebutton.Font = "SourceSans"
+closebutton.Size = UDim2.new(0, 45, 0, 28)
+closebutton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+closebutton.Text = "X"
+closebutton.TextSize = 30
+closebutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+closebutton.Position = UDim2.new(0, 0, -1, 27) 
 
 -- Bildirim 
 
