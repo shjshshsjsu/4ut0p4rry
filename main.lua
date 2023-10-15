@@ -18,6 +18,7 @@ main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 main.ResetOnSpawn = false
 main.IgnoreGuiInset = true -- Ekran kenarlarını dikkate alma
+main.DisplayOrder = 999 -- Ekran düzenleme sırası
 
 main.Position = UDim2.new(0, 0, 0, 0)
 main.Size = UDim2.new(1, 0, 1, 0)
