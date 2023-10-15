@@ -33,7 +33,7 @@ Duration = 5;
 
 -- Auto Parry
 
-Auto.MouseButton1Down:connect(function()
+Auto.MouseButton1Click:connect(function()
 getgenv().god = true
 while getgenv().god and task.wait() do
     for _,ball in next, workspace.Balls:GetChildren() do
