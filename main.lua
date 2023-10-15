@@ -62,7 +62,7 @@ AutoClick.TextColor3 = Color3.fromRGB(0, 0, 0)
 
 -- Close Button
 closebutton.Name = "Close"
-closebutton.Parent = main
+closebutton.Parent = Frame
 closebutton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 closebutton.Font = "SourceSans"
 closebutton.Size = UDim2.new(0, 45, 0, 28)
@@ -70,7 +70,7 @@ closebutton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 closebutton.Text = "X"
 closebutton.TextSize = 30
 closebutton.TextColor3 = Color3.fromRGB(0, 0, 0)
-closebutton.Position = UDim2.new(0.91, 0, 0.01, 0)
+closebutton.Position = UDim2.new(0.91, 0, -0.05, 0)
 
 -- Bildirim
 game:GetService("StarterGui"):SetCore("SendNotification", {
