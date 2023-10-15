@@ -89,3 +89,6 @@ closebutton.MouseButton1Click:Connect(function()
 main:Destroy()
 end) 
 
+Click.MouseButton1Click:Connect(function()
+main:Destroy()
+end) 
