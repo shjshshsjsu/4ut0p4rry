@@ -1,7 +1,6 @@
 local main = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local Auto = Instance.new("TextButton")
-local Click = Instance.new("TextButton")
 
 main.Name = "main"
 main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
