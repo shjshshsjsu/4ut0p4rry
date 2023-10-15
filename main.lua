@@ -98,6 +98,7 @@ local autoClickEnabled = false
 AutoParry.MouseButton1Click:Connect(function()
     autoParryEnabled = not autoParryEnabled
     StatusParryLabel.Text = "Status Parry: " .. (autoParryEnabled and "On" or "Off")
+        
         StatusParryLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
     if autoParryEnabled then
         print("Auto Parry is enabled.")
@@ -129,6 +130,7 @@ while getgenv().god and task.wait() do
         end
     else
         print("Auto Parry is disabled.")
+            StatusParryLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
     end
 end)
 
@@ -153,6 +155,7 @@ end
 AutoClick.MouseButton1Click:Connect(function()
     autoClickEnabled = not autoClickEnabled
     StatusClickLabel.Text = "Status Click: " .. (autoClickEnabled and "On" or "Off")
+        StatusClickLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
     if autoClickEnabled then
         print("Auto Click is enabled.")
         while autoClickEnabled do
@@ -161,6 +164,7 @@ AutoClick.MouseButton1Click:Connect(function()
         end
     else
         print("Auto Click is disabled.")
+            StatusClickLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
     end
 end)
 
