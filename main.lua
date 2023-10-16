@@ -25,7 +25,7 @@ Frame.Parent = main
 Frame.BackgroundColor3 = Color3.fromRGB(54, 54, 54)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.Position = UDim2.new(0.100320168, 0, 0.379746825, 0)
-Frame.Size = UDim2.new(120, 220, 0, 60)
+Frame.Size = UDim2.new(1, -48, 0, 48)
 
 
 AutoParry.Name = "AutoParry"
